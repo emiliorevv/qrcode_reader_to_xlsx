@@ -1,0 +1,5 @@
+.venv
+.DS_Store
+.idea
+__pycache__
+empleados_qr_actualizado.xlsx
