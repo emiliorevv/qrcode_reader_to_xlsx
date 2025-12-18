@@ -8,7 +8,7 @@ Este proyecto usa **OpenCV** para leer la cámara y decodificar el QR (sin depen
 
 ---
 
-## 📦 Requisitos
+## Requisitos
 
 * **Python** 3.9 – 3.12 (recomendado 3.12).
 * Cámara web funcional (o archivo de video para pruebas).
@@ -27,7 +27,7 @@ Pillow>=10.0.0  # opcional, requerido por qrcode para generar imágenes
 
 ---
 
-## 🚀 Instalación y ejecución (Windows / macOS / Linux)
+## Instalación y ejecución (Windows / macOS / Linux)
 
 > Los comandos asumen que estás en la carpeta del proyecto (donde está `main.py`).
 
@@ -63,7 +63,7 @@ python main.py
 
 ---
 
-## 🧪 Formatos de QR aceptados
+## Formatos de QR aceptados
 
 El lector extrae **Nombre / Número de empleado / Área** desde:
 
@@ -97,7 +97,7 @@ nombre=Ana Pérez; empleado id=7789; dept=Ventas
 
 ---
 
-## 🧾 Salida (Excel)
+## Salida (Excel)
 
 * Archivo: **`empleados_qr.xlsx`** (se crea automáticamente en la carpeta del proyecto).
 * Hoja activa con encabezados:
@@ -110,7 +110,7 @@ Cada lectura válida agrega una nueva fila. Se evita el **duplicado inmediato** 
 
 ---
 
-## 🔧 Solución de problemas de cámara
+## Solución de problemas de cámara
 
 ### 1) macOS — permisos de cámara
 
@@ -171,7 +171,7 @@ cap = cv2.VideoCapture("video_qr_prueba.mp4")
 
 ---
 
-## 🛠️ Solución de problemas del parser
+## Solución de problemas del parser
 
 * Si ves el mensaje: `⚠️ Faltan campos: ...`, el QR no contenía los tres campos requeridos.
 * Puedes activar **modo debug** en `parser_qr.py` para ver cómo se interpretan los pares clave:valor.
@@ -184,7 +184,7 @@ La consola mostrará los pares detectados, útil para ajustar el contenido del Q
 
 ---
 
-## 🧰 Comandos útiles
+## Comandos útiles
 
 ### Entorno / dependencias
 
@@ -228,7 +228,7 @@ git push origin main --force
 
 ---
 
-## 🧪 (Opcional) Generar QRs de prueba
+## (Opcional) Generar QRs de prueba
 
 Crea `generate_qr.py` para generar imágenes QR de ejemplo (requiere `qrcode` y `Pillow`):
 
@@ -247,7 +247,7 @@ print("QR generado: qr_empleado.png")
 
 ---
 
-## 📁 Estructura sugerida del proyecto
+## Estructura sugerida del proyecto
 
 ```
 .
@@ -261,7 +261,7 @@ print("QR generado: qr_empleado.png")
 
 ---
 
-## ❓ Preguntas frecuentes
+## Preguntas frecuentes
 
 **¿Necesito zbar/pyzbar?** No. Este lector usa `cv2.QRCodeDetector()`.
 
@@ -272,5 +272,3 @@ print("QR generado: qr_empleado.png")
 **¿Puedo cambiar el nombre del archivo Excel o columnas?** Sí, edita `EXCEL_FILE` y `HEADERS` en `excel_utils.py`.
 
 ---
-
-¡Listo! Si necesitas empaquetar esto como ejecutable (Windows `.exe` con PyInstaller o app en macOS), avísame y te dejo la receta. 🔧🧡
